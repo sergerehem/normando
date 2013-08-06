@@ -2,7 +2,16 @@
     <listener>
         <listener-class>groovyx.gaelyk.GaelykServletContextListener</listener-class>
     </listener>
-
+    <!--
+    <servlet>
+      <servlet-name>oauth2Callback</servlet-name>
+      <servlet-class>oauth2.OAuth2Callback</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>oauth2Callback</servlet-name>
+      <url-pattern>/oauth2callback/*</url-pattern>
+    </servlet-mapping>
+    -->    
     <servlet>
         <servlet-name>GroovletServlet</servlet-name>
         <servlet-class>groovyx.gaelyk.GaelykServlet</servlet-class>

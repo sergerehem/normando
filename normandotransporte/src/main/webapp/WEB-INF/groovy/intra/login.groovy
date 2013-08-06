@@ -1,8 +1,9 @@
 if (user != null) {
-	println "usuario logado " + user.getNickname() 
-	println "<a href='" + users.createLogoutURL(request.getRequestURI()) + "'>sign out</a>"
+	println "Usuario logado " + user.getNickname() 
+	println "<a href='" + users.createLogoutURL(request.getRequestURI()) + "'>Logoff</a>"
 } else {
-	println "Hello!"
-	println "<a href='" + users.createLoginURL(request.getRequestURI(),"www.normandotransportes.com.br") + "'>Sign in</a>"
+	url = request.continueTo ?: request.queryString
+println url
+	redirect users.createLoginURL(url ?: request.requestURI,"www.normandotransportes.com.br") 
 }
 

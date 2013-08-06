@@ -1,27 +1,33 @@
 import com.google.appengine.api.datastore.*
-import java.text.SimpleDateFormat
+import util.*
 
-def sdfDate = new SimpleDateFormat("dd/MM/yyyy")
-sdfDate.setTimeZone(TimeZone.getTimeZone("GMT-3"));
-def sdfTime = new SimpleDateFormat("kk:mm:ss")
-sdfTime.setTimeZone(TimeZone.getTimeZone("GMT-3"));
-def date = new Date()
-def data = sdfDate.format(date)
-def hora = sdfTime.format(date)
+def config = new Config(datastore)
 
 if (params.email == "" || params.nome == "" || params.assunto == "" || params.messagem == "") {
 	request.setAttribute 'status', "ERRO"
 } else {
-	mail.send from: "serge.rehem@normandotransportes.com.br",
-	to: "contato@normandotransportes.com.br",
-	subject: "[NOVO CONTATO] " + params.assunto,
-	textBody: "Nome: ${params.nome}\nEmail: ${params.email}\n---\n${params.mensagem}"
+	tit = "[CONTATO] " + params.assunto
+	msg = "Nome: ${params.nome}\nEmail: ${params.email}\n---\n${params.mensagem}"
+	mail.send from: config.mailSender,
+		to: "contato@normandotransportes.com.br",
+		subject: tit,
+		textBody: msg,
+  	replyTo: params.email
+
+	if (params.copia == "S") {
+		mail.send from: config.mailSender,
+			to: params.email,
+			subject: tit,
+			textBody: "Olá ${params.nome},\n\nEsta é a sua cópia do contato enviado à Normando Transportes.\n---\n" + msg + "\n\nA gente se entrega e as melhores condições chegam até você.\nNormando Transportes\nwww.normandotransportes.com.br",
+			replyTo: config.replyTo
+	}
 
 	request.setAttribute 'status', "OK"
 	
   def e = new Entity("contato")
   e << params
-  e.data_hora = "$data $hora"
+  e.dateCreated = (new Clock()).getDateTime()
   e.save()	
-}
+} 
 forward '/WEB-INF/pages/contato.gtpl'
+

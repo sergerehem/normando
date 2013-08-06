@@ -6,7 +6,7 @@
 <div class="alert alert-success">
 	<button data-dismiss="alert" class="close" type="button">×</button>
 	<h2>Orçamento Solicitado com Sucesso</h2>
-	<p>Obrigado por entrar em contato com a Normando Transporte. Daremos retorno em até dois dias úteis.</p>
+	<p>Obrigado por entrar em contato com a Normando Transporte. Daremos retorno até o próximo dia útil.</p>
 </div>
 <%} else if (request.getAttribute('status') == "ERRO") {%>
 <div class="alert alert-error">
@@ -52,9 +52,9 @@
                     </div>
                   </div>                    
                   <div class="control-group span5">
-                      <label class="control-label" for="inputEmail">Telefone<sup>*</sup></label>
+                      <label class="control-label" for="inputEmail">Telefone</label>
                       <div class="controls">
-                          <input name="tel" type="text" class="span4" id="inputTel" placeholder="Telefone de contato" required>
+                          <input name="tel" type="text" class="span4" id="inputTel" placeholder="Telefone de contato">
                       </div>
 	                </div>
 	              </div>
@@ -133,6 +133,15 @@
 	                      <textarea name="info" rows="4" class="span8" id="info" placeholder="Observações e esclarecimentos adicionais"></textarea>
 	                  </div>
 	              </div>
+								<div class="control-group">
+									<label class="control-label" for="copia"></label>
+									<div class="controls">
+										<label class="checkbox" for="checkCopia">
+											<input type="checkbox" name="copia" id="checkCopia" value="S" checked>
+											Desejo receber uma cópia desta solicitação em meu e-mail
+										</label>
+									</div>
+								</div>
 	              <div class="control-group form-button-offset">
 	                  <input type="submit" class="btn btn-warning" value="Solicitar orçamento" />
 	              </div>
@@ -145,14 +154,10 @@
 <script type="text/javascript">
 	(jQuery)(document).ready(function(){ 
 
-    (jQuery)("#divOutraMercadoria").hide(); 
-    
+    hideShowOutraMercadoria();
+
     (jQuery)("#selectMercadoria").change(function() {
-        if ((jQuery)(this).attr('value') == "Outra") {
-          (jQuery)("#divOutraMercadoria").show(); 
-        } else {
-          (jQuery)("#divOutraMercadoria").hide(); 
-        }
+	    hideShowOutraMercadoria();
     });
 
     (jQuery)("#inputTel").mask("(99) 9999?9-9999");
@@ -184,21 +189,17 @@
     (jQuery)('#inputDestino').keyup(function() {
         (jQuery)(this).val((jQuery)(this).val().toUpperCase());
     });
-
-    /*           
-    (jQuery)("#orcamentoForm").validate({
-       rules: {
-         mercadoria: {
-           required: {
-             depends: function(element){
-               return (jQuery)("#selectMercadoria").val() == "Outra";
-             }
-           }
-         }
-       }
-    });    
-    */
   });    
+
+	function hideShowOutraMercadoria() {
+    if ((jQuery)("#selectMercadoria").val() == "Outra") {
+      (jQuery)("#divOutraMercadoria").show(); 
+			(jQuery)("#inputMercadoria").prop("required", true);
+    } else {
+      (jQuery)("#divOutraMercadoria").hide(); 
+			(jQuery)("#inputMercadoria").prop("required", false);
+    }	
+	}
 </script>
 
 <% include '/WEB-INF/includes/footer.gtpl' %>

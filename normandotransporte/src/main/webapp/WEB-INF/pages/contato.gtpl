@@ -53,6 +53,15 @@
 	                    <textarea name="mensagem" rows="4" class="span8" id="textarea" required></textarea>
 	                </div>
 	            </div>
+							<div class="control-group">
+								<label class="control-label" for="copia"></label>
+								<div class="controls">
+									<label class="checkbox" for="checkCopia">
+										<input type="checkbox" name="copia" id="checkCopia" value="S" checked>
+										Desejo receber uma cópia deste contato em meu e-mail
+									</label>
+								</div>
+							</div>
 	            <div class="control-group form-button-offset">
 	                <input type="submit" class="btn btn-warning" value="Enviar" />
 	            </div>

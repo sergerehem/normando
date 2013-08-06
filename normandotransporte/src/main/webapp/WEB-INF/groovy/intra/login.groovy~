@@ -1,0 +1,8 @@
+if (user != null) {
+	println "Usuario logado " + user.getNickname() 
+	println "<a href='" + users.createLogoutURL(request.getRequestURI()) + "'>Logoff</a>"
+} else {
+	url = request.continueToURL ?: request.queryString
+	redirect users.createLoginURL(url ?: request.requestURI,"www.normandotransportes.com.br") 
+}
+
