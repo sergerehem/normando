@@ -17,23 +17,25 @@ def p = datastore.execute {
 }
 
 if (params.op == "registrar") {
-		if (p == null) {println "new"
-			p = new Entity("ponto")
-			p.id = pontoId
-			p.email = params.email
-			p.mes = clock.month
-			p.data = clock.date
-			p.t1 = ""
-			p.t2 = ""
-			p.t3 = ""
-			p.t4 = ""
-			p['t'+params.turno] = params.hora[0..4]
-			p.turno = params.turno
-		} else {println "atu"
-			p['t'+params.turno] = params.hora[0..4]
-			p.turno = params.turno
+    datastore.withTransaction {
+		  if (p == null) {println "new"
+			  p = new Entity("ponto")
+			  p.id = pontoId
+			  p.email = params.email
+			  p.mes = clock.month
+			  p.data = clock.date
+			  p.t1 = ""
+			  p.t2 = ""
+			  p.t3 = ""
+			  p.t4 = ""
+			  p['t'+params.turno] = params.hora[0..4]
+			  p.turno = params.turno
+		  } else {println "atu"
+			  p['t'+params.turno] = params.hora[0..4]
+			  p.turno = params.turno
+		  }
+		  p.save()
 		}
-		p.save()
 }
 
 request.pontoDoDia = p
