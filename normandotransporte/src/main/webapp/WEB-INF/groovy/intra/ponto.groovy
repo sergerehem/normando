@@ -1,6 +1,7 @@
 import com.google.appengine.api.datastore.Entity
 import util.Clock
 
+def meses = ["","JANEIRO","FEVEREIRO","MARÇO","ABRIL","MARÇO","JUNHO","JULHO","AGOSTO","SETEMBRO","OUTUBRO","NOVEMBRO","DEZEMBRO"]
 
 if (user == null) {
 	request.continueTo = request.requestURL+"?"+request.queryString
@@ -36,10 +37,12 @@ if (params.op == "registrar") {
 }
 
 request.pontoDoDia = p
+if (p) {
+  request.mesAno = meses[p.mes as int]+"/"+p.data[6..9]
+}
 request.pontoDoMes = datastore.execute {
 	select all from "ponto"
 	where email == user.email
 	and mes == clock.month
 }
-
-forward "/WEB-INF/pages/ponto.gtpl"
+forward "/WEB-INF/pages/intra/ponto.gtpl"

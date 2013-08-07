@@ -1,7 +1,7 @@
 import com.google.appengine.api.datastore.*
 import util.*
 
-def config = new Config(datastore)
+def config = new Config()
 
 if (params.email == "" || params.nome == "" || params.assunto == "" || params.messagem == "") {
 	request.setAttribute 'status', "ERRO"

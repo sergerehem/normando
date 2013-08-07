@@ -39,42 +39,56 @@
 						<input type="hidden" name="hora" id="hiddenHora"/>
 						<!-- Select Multiple -->
 						<div class="control-group">
+						  <br/>
 							<div class="controls">
 								<%
 								def disabled(t,i) {
 									(t!=null && t["t$i"].trim() != "") ? "disabled" : ""
 								}
+								def color(t,i) {
+									(t!=null && t["t$i"].trim() != "") ? "dark-gray" : "black"
+								}								
 								def show(t,i) {
 									(t!=null && t["t$i"].trim() != "") ? t["t$i"].trim() : ""
 								}
 								pDia = request.pontoDoDia
 								%>
-								<labe><input type="radio" name="turno" value="1" ${disabled(pDia,1)} ${pDia==null ? 'checked':''}/>1. Manhã - Entrada ${show(pDia,1)}</label><br/>
-								<input type="radio" name="turno" value="2" ${disabled(pDia,2)} ${pDia?.turno=='1' ? 'checked':''}>2. Manhã - Saída ${show(pDia,2)}</option><br/>
-								<input type="radio" name="turno" value="3" ${disabled(pDia,3)} ${pDia?.turno=='2' ? 'checked':''}>3. Tarde - Entrada ${show(pDia,3)}</option><br/>
-								<input type="radio" name="turno" value="4" ${disabled(pDia,4)} ${pDia?.turno=='3' ? 'checked':''}>4. Tarde - Saída ${show(pDia,4)}</option>
+								<table class="table">
+								<tr><td><input type="radio" style="font-size: 20px" name="turno" value="1" ${disabled(pDia,1)} ${pDia==null ? 'checked':''}/></td><td><label style="font-size: 16px; color: ${color(pDia,1)};">TURNO 1 - ENTRADA</label></td><td><label style="font-size: 16px; color: ${color(pDia,1)};">${show(pDia,1)}</label></td></tr>
+                <tr><td><input type="radio" style="font-size: 20px" name="turno" value="2" ${disabled(pDia,2)} ${pDia?.turno=='1' ? 'checked':''}/></ td><td><label style="font-size: 16px; color: ${color(pDia,2)};">TURNO 1 - SAÍDA</label></td><td><label style="font-size: 16px; color: ${color(pDia,2)};">${show(pDia,2)}</label></td></tr>								
+                <tr><td><input type="radio" style="font-size: 20px" name="turno" value="3" ${disabled(pDia,3)} ${pDia?.turno=='2' ? 'checked':''}/></td><td><label style="font-size: 16px; color: ${color(pDia,3)};">TURNO 2 - ENTRADA</label></td><td><label style="font-size: 16px; color: ${color(pDia,3)};">${show(pDia,3)}</label></td></tr>								
+                <tr><td><input type="radio" style="font-size: 20px" name="turno" value="4" ${disabled(pDia,4)} ${pDia?.turno=='3' ? 'checked':''}/></td><td><label style="font-size: 16px; color: ${color(pDia,4)};">TURNO 2 - SAÍDA</label></td><td><label style="font-size: 16px; color: ${color(pDia,4)};">${show(pDia,4)}</label></td></tr>       
+								 </table>
+                <div class="control-group form-button-offset">
+                    <input type="submit" class="btn btn-warning" value="Registrar Horário" />
+                </div>
 							</div>
-	              <div class="control-group form-button-offset">
-	                  <input type="submit" class="btn btn-warning" value="Registrar Horário" />
-	              </div>
 						</div>
 					</fieldset>
 				</form>
+				<%if(request.mesAno){%>
 				<div class="row">
 					<div class="span8">
-						<table border="1">
-							<tr><td>DATA</td><td>ENT</td><td>SAI</td><td>ENT</td><td>SAI</td></tr>
-						<%
-						pMes = request.pontoDoMes
-						pMes.each { p ->
-						%>
-							<tr><td>$p.data</td><td>${p?.t1}</td><td>${p?.t2}</td><td>${p?.t3}</td><td>${p?.t4}</td></tr>					
-						<%
-						}
-						%>
+
+						<table class="table  table-bordered table-striped">
+						  <thead>
+						    <tr><th colspan="5" class="text-center">${request.mesAno}</th></tr>
+							  <tr><th rowspan="2" class="text-center" style="vertical-align:middle;">DIA</th><th colspan="2" class="text-center">TURNO 1</th><th colspan="2" class="text-center">TURNO 2</th></tr>
+							  <tr><th>ENTRADA</th><th>SAIDA</th><th>ENTRADA</th><th>SAIDA</th></tr>							
+						  </thead>							
+						  <tbody>
+						  <%
+						  pMes = request.pontoDoMes
+						  pMes.each { p ->
+						  %>
+						  <tr><td>${(p.data as String)[0..1]}</td><td>${p?.t1}</td><td>${p?.t2}</td><td>${p?.t3}</td><td>${p?.t4}</td></tr>					
+						  <%
+						  }
+						  %>
+						  </tbody>						  
 						</table>
 				</div>
-			</div>
+				<%}%>				
 			</div>
 	 </div>
 </div>
@@ -105,12 +119,15 @@ function displayTime() {
 	var now = httpGet('/intranet/clock?t=hora');
 	(jQuery)("#hiddenHora").val(now);
 	//Get the Context 2D or 3D
-	var context = clock.getContext("2d");
-	context.clearRect(0, 0, 500, 200);
-	context.font = "60px Arial";
-	context.fillStyle = "black";
-	context.fillText(now, 35, 90);
-	setTimeout(displayTime, 1000);               // Run again in 1 second
+	var canvas = document.getElementById('clock');
+  if (canvas.getContext) {
+  	var context = canvas.getContext("2d");
+	  context.clearRect(0, 0, 500, 200);
+	  context.font = "60px Arial";
+	  context.fillStyle = "black";
+	  context.fillText(now, 35, 90);
+	  setTimeout(displayTime, 1000);               // Run again in 1 second
+	}
 }
 </script>
 

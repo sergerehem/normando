@@ -1,7 +1,7 @@
 import com.google.appengine.api.datastore.*
 import util.*
 
-def config = new Config(datastore)
+def config = new Config()
 
 if (params.empresa == "" || params.nome == "" || params.email == "" 
     || params.selectMercadoria == "" || params.origem == "" || params.destino == "" || params.peso == ""

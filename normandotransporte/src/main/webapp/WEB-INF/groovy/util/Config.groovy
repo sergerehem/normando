@@ -2,12 +2,15 @@ package util
 
 import com.google.appengine.api.datastore.*
 
+import groovyx.gaelyk.GaelykBindings
+ 
+@GaelykBindings
 public class Config {
 	static def config = null
 
-	public Config(ds) {
+	public Config() {
 		if (config == null) {
-			config = ds.execute {
+			config = datastore.execute {
 				select all from config limit 1
 			}
 		} else {

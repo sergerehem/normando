@@ -9,7 +9,7 @@ public class GoogleAPI {
   private static final def redirect_uri = 'http://localhost:8080/oauth2callback'
   private static final def oauth2_token_uri = "https://accounts.google.com/o/oauth2/token"
   
-  private static final def userinfo_uri = "https://www.googleapis.com/oauth2/v1/userinfo"
+  private static final def userinfo_uri = "https://www.googleapis.com/oauth2/v3/userinfo"
   
   public static final def USERINFO_SCOPE = "https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile"
   
@@ -28,10 +28,9 @@ public class GoogleAPI {
   }
   
   def requestUserInfo(token) {
-    new URL("${userinfo_uri}?access_token=${token}").text
+    def userInfo = new URL("${userinfo_uri}?access_token=${token}").text
+	  def slurper = new JsonSlurper()
+	  def json = slurper.parseText(userInfo)
+    json
   }
-  
-  def userInfo(String scope, String state) {
-    requestUserInfo(requestAuthToken(scope, state))
-  }  
 }

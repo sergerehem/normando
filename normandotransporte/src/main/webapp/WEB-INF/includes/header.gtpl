@@ -41,6 +41,15 @@
                 background: #FFFF00;
                 border: 2px solid #FA8072;
             }
+            
+          .text-center {
+              text-align: center !important;
+          }            
+          
+          thead th {
+              background-color: #ff9900;
+              color: white;
+          }          
 				</style>
     </head>
     <body>
