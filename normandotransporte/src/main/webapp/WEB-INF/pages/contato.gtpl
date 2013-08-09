@@ -44,7 +44,7 @@
 	            <div class="control-group">
 	                <label class="control-label" for="inputAssunto">Assunto<sup>*</sup></label>
 	                <div class="controls">
-	                    <input name="assunto" type="text" class="span4" id="inputAssunto" placeholder="Informe o assunto da sua mensagem" <%if(params.assunto) {%>value="$params.assunto <Detalhe o assunto>"<%}%>required>
+	                    <input name="assunto" type="text" class="span4" id="inputAssunto" placeholder="Informe o assunto da sua mensagem" <%if(params.assunto) {%>value="[$params.assunto] <Detalhe o assunto>"<%}%>required>
 	                </div>
 	            </div>
 	            <div class="control-group">

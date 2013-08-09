@@ -27,7 +27,7 @@
 <h4 class="center-title">Matriz - BA</h4>
 <!-- FOOTER: ADDRESS -->
                                     <address class="address">
-                                        <p><a href="/localizacao_matriz"><i class="icon-map-marker icon-large"></a></i>Posto Laçador, BR-324, Km 35 – Sala 17</p>
+                                        <p><a href="/localizacao_matriz"><i class="icon-map-marker icon-large"></i></a>Posto Laçador, BR-324, Km 35 – Sala 17</p>
                                         <p><i>&nbsp;&nbsp;</i>Distrito Industrial</p>
                                         <p><i>&nbsp;&nbsp;</i>Candeias/BA</p>
                                         <p><i class="icon-phone icon-large"></i>Tel: (71) 3289-3996</p>
@@ -38,7 +38,7 @@
 <h4 class="center-title">Filial - SE</h4>
 <!-- FOOTER: ADDRESS -->
                                     <address class="address">
-                                        <p><a href="/localizacao_filial"><i class="icon-map-marker icon-large"></a></i>Posto Pedra Branca, BR-101, Km 75 – Box 39</p>
+                                        <p><a href="/localizacao_filial"><i class="icon-map-marker icon-large"></i></a>Posto Pedra Branca, BR-101, Km 75 – Box 39</p>
                                         <p><i>&nbsp;&nbsp;</i>Pedra Branca</p>
                                         <p><i>&nbsp;&nbsp;</i>Laranjeiras/SE</p>
                                         <p><i class="icon-phone icon-large"></i>Tel: (79) 3281-3906</p>

@@ -32,7 +32,6 @@
         <script type="text/javascript" src="js/jquery.maskMoney.js"></script>                
     </head>
     <body>
-    <body>
 <!-- THE LINE AT THE VERY TOP OF THE PAGE -->
         <div class="top_line"></div>
 <!-- HEADER AREA -->
@@ -47,8 +46,8 @@
                     </div>
                     <div class="span6 offset2">
 <!-- HEADER: PHONE NUMBER -->
-                        <p class="head_phone"><a href="tel:71-3286-3996"><font size="-1">71</font> 3289-3966 BA</a> | 
-												<a href="tel:79-3281-3906"><font size="-1">79</font> 3281-3906 SE</a></p>
+                        <p class="head_phone"><a href="tel:71-3286-3996"><span class="ddd">71</span> 3289-3966 BA</a> | 
+												<a href="tel:79-3281-3906"><span class="ddd">79</span> 3281-3906 SE</a></p>
                     </div>
 <!-- HEADER: SOCIAL ICONS -->
                     <ul class="socials unstyled">

@@ -1235,6 +1235,11 @@ ul.icons {
     margin-top: 25px;
     padding-bottom: 0;
 }
+
+.head_phone .ddd {
+    font-size: 14px;
+}
+
 .navbar .nav .open .dropdown-menu .active a {
     background-color: #333333;
     border: none;
@@ -1351,7 +1356,7 @@ ul.icons {
     padding: 8px 10px 11px;
 }
 .navbar .nav > li .dropdown-menu li a:hover {
-    background-color: #292929;
+    background-color: #4C4646;
     background-image: none !important;
     filter: none;
 }
@@ -1367,9 +1372,9 @@ ul.icons {
     background: none;
 }
 .navbar .nav > li a {
-    color: #333333;
+    color: #808080;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: 16px;
     margin-bottom: 0;
     padding: 15px 15px 8px;

@@ -1,4 +1,4 @@
-<% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl?title=Normando Transportes - Solicite orçamento informando mercadoria, origem, destino e volume' %>
 
 <!-- MAIN CONTENT AREA -->
                         
@@ -31,7 +31,7 @@
 	          <form name="orcamentoForm" id="validForm" method="POST" action="/orcamento_submit">
 	              <br/>
                 <h3>Informações da Empresa</h3>
-	              <div class="text-divider1"/>
+	              <div class="text-divider1"></div>
 	              <div class="control-group">
 	                  <label class="control-label" for="inputEmpresa">Empresa<sup>*</sup></label>
 	                  <div class="controls">
@@ -59,10 +59,10 @@
 	                </div>
 	              </div>
                 <h3>Informações da Mercadoria</h3>
-	              <div class="text-divider1"/>
+	              <div class="text-divider1"></div>
                 <div class="row">                               
 	                <div class="control-group span5">
-  	                <label class="control-label" for="selectMercadoria" placeholder="Descreva a mercadoria">Outro Produto<sup>*</sup></label>
+  	                <label class="control-label" for="selectMercadoria">Mercadoria<sup>*</sup></label>
                     <select name="selectMercadoria" id="selectMercadoria">
                       <option value="Piso/Revestimento">Piso/Revestimento</option>
                       <option value="Argamassa">Argamassa</option>
@@ -71,7 +71,7 @@
                     </select>	                    
 	                </div>
 	                <div class="control-group span5" id="divOutraMercadoria">
-	                    <label class="control-label" for="inputMercadoria">Mercadoria<sup>*</sup></label>
+	                    <label class="control-label" for="inputMercadoria">Outra mercadoria<sup>*</sup></label>
 	                    <div class="controls">
 	                        <input name="mercadoria" type="text" class="span4" id="inputMercadoria" placeholder="Informe a mercadoria a ser transportada">
 	                    </div>
@@ -126,7 +126,7 @@
 	                </div>	      	            	
 	              </div>
                 <h3>Informações Adicionais</h3>
-	              <div class="text-divider1"/>	     
+	              <div class="text-divider1"></div>
 	              <br/>                     	            
 	              <div class="control-group">
 	                  <div class="controls">

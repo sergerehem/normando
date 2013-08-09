@@ -45,8 +45,8 @@
                 <div class="caption sfb carousel-caption" data-x="674" data-y="262" data-speed="1000" data-start="1000" data-easing="easeInBack" style="background: none; width: 436px;">
                     <p class="small">Entregue sua carga para nós.<br/>Nós entregamos pra você.</p>
                 </div>
-            </li>
-    	</ul>-->
+            </li>-->
+    	</ul>
       <div class="tp-bannertimer"></div>
     </div>
 </div>
@@ -119,7 +119,7 @@
         <div class="span12">
 		  <div id="clients" class="row show-grid isotope" style="position: relative; overflow: hidden;">
 		      <div class="span3 clear-both hp-wrapper isotope-item" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate(0px, 0px);">
-		          <a href="http://www.eliane.com.br"><img alt="Eliane" border="none" src="img/eliane_logo.png"></a>
+		          <a href="http://www.eliane.com.br"><img alt="Eliane" src="img/eliane_logo.png"></a>
 		      </div>
 		      <div class="span3 hp-wrapper isotope-item" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate(240px, 0px);">
 		          <a href="http://www.incenor.com.br"><img alt="Incenor" src="img/incenor_logo.png"></a>
