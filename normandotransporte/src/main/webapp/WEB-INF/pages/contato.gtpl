@@ -1,4 +1,4 @@
-<% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl?title=Normando Transportes - Entre em contato conosco e tire sua dúvida' %>
 
 <!-- MAIN CONTENT AREA -->
                         
@@ -44,7 +44,7 @@
 	            <div class="control-group">
 	                <label class="control-label" for="inputAssunto">Assunto<sup>*</sup></label>
 	                <div class="controls">
-	                    <input name="assunto" type="text" class="span4" id="inputAssunto" placeholder="Informe o assunto da sua mensagem" required>
+	                    <input name="assunto" type="text" class="span4" id="inputAssunto" placeholder="Informe o assunto da sua mensagem" <%if(params.assunto) {%>value="$params.assunto <Detalhe o assunto>"<%}%>required>
 	                </div>
 	            </div>
 	            <div class="control-group">
@@ -53,15 +53,6 @@
 	                    <textarea name="mensagem" rows="4" class="span8" id="textarea" required></textarea>
 	                </div>
 	            </div>
-							<div class="control-group">
-								<label class="control-label" for="copia"></label>
-								<div class="controls">
-									<label class="checkbox" for="checkCopia">
-										<input type="checkbox" name="copia" id="checkCopia" value="S" checked>
-										Desejo receber uma cópia deste contato em meu e-mail
-									</label>
-								</div>
-							</div>
 	            <div class="control-group form-button-offset">
 	                <input type="submit" class="btn btn-warning" value="Enviar" />
 	            </div>

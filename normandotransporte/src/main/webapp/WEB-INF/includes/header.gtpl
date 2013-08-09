@@ -2,55 +2,34 @@
 <html>
     <head>
         <!--  SEO STUFF START HERE -->
-        <title>Normando Transportes</title>
-        <meta name="keywords" content="transportadora, transporte, rodoviário, carga, frete, caminhão, frota" />
-        <meta name="description" content="Normando Transportes" />
+        <title><%if (!params.title) {%>Normando Transportes<%} else {%>$params.title<%}%></title>
+        <meta name="keywords" content="transportadora, transporte, rodoviário, carga, frete, caminhão, frota, transportes" />
+        <meta name="description" content="<%if (!params.title) {%>Normando Transportes<%} else {%>$params.title<%}%>" />
         <meta name="author" content="Serge Rehem" />
         <meta name="robots" content="follow, index" />
         <!--  SEO STUFF END -->
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--  revolution slider plugin : begin -->        
-        <link rel="stylesheet" type="text/css" href="/rs-plugin/css/settings.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="/css/rs-responsive.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/rs-responsive.css" media="screen" />
         <!--  revolution slider plugin : end -->
-        <link rel="stylesheet" href="/css/bootstrap.css" />
-        <link rel="stylesheet" href="/css/custom.css" />
-        <link rel="stylesheet" href="/css/isotope.css" />
-        <link rel="stylesheet" href="/css/color_scheme.css" />
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/isotope.css" />
+        <link rel="stylesheet" href="css/color_scheme.css" />
         <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />-->
-        <link rel="stylesheet" href="/css/font-awesome.css" />
-        <link rel="stylesheet" href="/css/font-awesome-ie7.css" />
-        <link rel="stylesheet" href="/css/flexslider.css" />
-        <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/font-awesome.css" />
+        <link rel="stylesheet" href="css/font-awesome-ie7.css" />
+        <link rel="stylesheet" href="css/flexslider.css" />
+        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
         <!--[if lte IE 8]>
-            <link rel="stylesheet" type="text/css" href="/css/IE-fix.css" />
+            <link rel="stylesheet" type="text/css" href="css/IE-fix.css" />
         <![endif]-->
-        <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="/js/jquery.maskedinput.min.js"></script>                        
-        <script type="text/javascript" src="/js/jquery.maskMoney.js"></script>  
-
-				<style>                        
-					#clock
-            {
-                display: block;
-                width: 300px;
-                height: 100px;
-                margin: 0 auto;
-                background: #FFFF00;
-                border: 2px solid #FA8072;
-            }
-            
-          .text-center {
-              text-align: center !important;
-          }            
-          
-          thead th {
-              background-color: #ff9900;
-              color: white;
-          }          
-				</style>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>                        
+        <script type="text/javascript" src="js/jquery.maskMoney.js"></script>                
     </head>
     <body>
     <body>
@@ -63,7 +42,7 @@
 <!-- HEADER: LOGO AREA -->
                     <div class="span4 logo">
                         <a class="logo" href="index.html">
-                            <img alt="logo" title="bizstrap" src="/img/logo.png">
+                            <img alt="logo" title="bizstrap" src="img/logo.png">
                         </a>
                     </div>
                     <div class="span6 offset2">
@@ -91,11 +70,11 @@
                                     <li class="active single"><a href="/">HOME
 																       <i>a normando</i>
                                         </a>
-                                    </li> <!--
-                                    <li class="single"><a href="/contato">EQUIPE
+                                    </li> 
+                                    <li class="single"><a href="/equipe">EQUIPE
                                             <i>nosso time</i>
                                         </a>
-                                    </li>   -->                                   
+                                    </li>                               
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">
                                             LOCALIZAÇÃO<i>bahia | sergipe</i>

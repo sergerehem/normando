@@ -1,4 +1,4 @@
-<% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl?title=Normando Transportes - Localização matriz: Rodovia BR 324, KM 35, Candeias - BA' %>
 
 <!-- MAIN CONTENT AREA -->
                         
@@ -24,7 +24,7 @@
 <!-- BEGIN RIGHT-SIDE CONTACT FORM AREA -->
                                 <div class="contact-info span4">
                                     <h2>Matriz - BA</h2>
-<!-- COMPANY ADDRESS -->                                    
+<!-- COMPANY ADDRESS -->                         
                                     <address>
                                         Rodovia BR 324, KM 35, S/N<br />
                                         KM 35, S/N<br />
@@ -32,6 +32,7 @@
                                         Telefone: (71) 3289-3966<br />
                                         Email: <a href="contato@normandotransportes.com.br">contato@normandotransportes.com.br</a><br />
                                     </address>
+																		<img src="/img/normando_ba.jpg" alt="Normando Transportes Filial Sergipe" class="img-polaroid"/><br/>
                                 </div>
 <!-- END RIGHT-SIDE CONTACT FORM AREA -->
 

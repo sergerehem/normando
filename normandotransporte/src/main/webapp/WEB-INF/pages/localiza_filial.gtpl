@@ -1,4 +1,4 @@
-<% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl?title=Normando Transportes - Localização filial: Rodovia BR 101, KM 75, Laranjeiras - SE' %>
 
 <!-- MAIN CONTENT AREA -->
                         
@@ -32,6 +32,7 @@
                                         Telefone: (79) 3281-3906<br />
                                         Email: <a href="mailto:sergipe@normandotransportes.com.br">sergipe@normandotransportes.com.br</a><br />
                                     </address>
+																		<img src="/img/normando_se.jpg" alt="Normando Transportes Filial Bahia" class="img-polaroid"/><br/>
                                 </div>
 <!-- END RIGHT-SIDE CONTACT FORM AREA -->
 
