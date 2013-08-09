@@ -1,9 +1,0 @@
-import static util.Clock.*
-
-if (params.t == "data")
-	println getDate()
-else if (params.t == "hora")
-	println getTime()
-else
-	println getDateTime()
-
