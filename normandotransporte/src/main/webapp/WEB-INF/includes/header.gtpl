@@ -11,25 +11,25 @@
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--  revolution slider plugin : begin -->        
-        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="css/rs-responsive.css" media="screen" />
+        <link rel="stylesheet" href="/rs-plugin/css/settings.css" media="screen" />
+        <link rel="stylesheet" href="/css/rs-responsive.css" media="screen" />
         <!--  revolution slider plugin : end -->
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="css/isotope.css" />
-        <link rel="stylesheet" href="css/color_scheme.css" />
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/custom.css" />
+        <link rel="stylesheet" href="/css/isotope.css" />
+        <link rel="stylesheet" href="/css/color_scheme.css" />
         <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />-->
-        <link rel="stylesheet" href="css/font-awesome.css" />
-        <link rel="stylesheet" href="css/font-awesome-ie7.css" />
-        <link rel="stylesheet" href="css/flexslider.css" />
-        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+        <link rel="stylesheet" href="/css/font-awesome.css" />
+        <link rel="stylesheet" href="/css/font-awesome-ie7.css" />
+        <link rel="stylesheet" href="/css/flexslider.css" />
+        <link rel="stylesheet" href="/css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
         <!--[if lte IE 8]>
-            <link rel="stylesheet" type="text/css" href="css/IE-fix.css" />
+            <link rel="stylesheet" type="text/css" href="/css/IE-fix.css" />
         <![endif]-->
-        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-        <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>                        
-        <script type="text/javascript" src="js/jquery.maskMoney.js"></script>                
+        <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.maskedinput.min.js"></script>                        
+        <script type="text/javascript" src="/js/jquery.maskMoney.js"></script>                
     </head>
     <body>
 <!-- THE LINE AT THE VERY TOP OF THE PAGE -->
@@ -41,7 +41,7 @@
 <!-- HEADER: LOGO AREA -->
                     <div class="span4 logo">
                         <a class="logo" href="index.html">
-                            <img alt="logo" title="bizstrap" src="img/logo.png">
+                            <img alt="logo" title="Normando Transportes" src="/img/logo.png">
                         </a>
                     </div>
                     <div class="span6 offset2">

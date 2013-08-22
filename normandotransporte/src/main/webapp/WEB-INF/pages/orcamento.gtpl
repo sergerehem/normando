@@ -28,7 +28,7 @@
         <div class="clear_both"></div>
         <div class="row show-grid">      
 				  <div class="span10 offset1">	
-	          <form name="orcamentoForm" id="validForm" method="POST" action="/orcamento_submit">
+	          <form name="orcamentoForm" id="validForm" method="POST" action="/orcamento">
 	              <br/>
                 <h3>Informações da Empresa</h3>
 	              <div class="text-divider1"></div>

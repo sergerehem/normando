@@ -1,4 +1,11 @@
-<!-- Indices written at Fri, 9 Aug 2013 12:37:35 UTC -->
+<!-- Indices written at Thu, 22 Aug 2013 13:47:33 UTC -->
 
-<datastore-indexes/>
+<datastore-indexes>
 
+    <!-- Used 5 times in query history -->
+    <datastore-index kind="ponto" ancestor="false" source="auto">
+        <property name="email" direction="asc"/>
+        <property name="mes" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

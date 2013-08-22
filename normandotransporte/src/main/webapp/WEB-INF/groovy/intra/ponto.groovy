@@ -9,7 +9,6 @@ if (user == null) {
 } 
 
 def clock = new Clock()
-
 def pontoId = (params.op == "registrar" ? params.email : user.email)+":"+clock.date
 def p = datastore.execute {
 	select single from "ponto"
@@ -38,6 +37,13 @@ if (params.op == "registrar") {
 		}
 }
 
+def pontoMes = params.mes ?: clock.month
+
+request.meses = datastore.execute {
+	select mes: String from "ponto"
+	where email == user.email
+}.collect { it.mes }.unique()
+
 request.pontoDoDia = p
 if (p) {
   request.mesAno = meses[p.mes as int]+"/"+p.data[6..9]
@@ -45,6 +51,7 @@ if (p) {
 request.pontoDoMes = datastore.execute {
 	select all from "ponto"
 	where email == user.email
-	and mes == clock.month
+	and mes == pontoMes
 }
+
 forward "/WEB-INF/pages/intra/ponto.gtpl"

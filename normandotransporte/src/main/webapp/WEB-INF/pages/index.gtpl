@@ -136,4 +136,4 @@
 </div>
 
 
-<% include '/WEB-INF/includes/footer.gtpl' %>
+<% include '/WEB-INF/includes/footer_intra.gtpl' %>

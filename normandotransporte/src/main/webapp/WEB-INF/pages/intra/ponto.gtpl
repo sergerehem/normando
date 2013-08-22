@@ -1,4 +1,4 @@
-<% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header_intra.gtpl?title=Normando Transportes - Intranet - Sistema de Controle de Ponto' %>
 
 <!-- MAIN CONTENT AREA -->
                         
@@ -21,8 +21,8 @@
 <!-- BREADCRUMBS -->                    
         <div id="breadcrumb">
         <ul>
-            <li class="home"><a href="#">home</a></li>
-            <li>contato</li>
+            <li class="home"><a href="#">intranet</a></li>
+            <li>ponto</li>
         </ul>
         </div>
         <div class="clear_both"></div>
@@ -69,24 +69,41 @@
 				<%if(request.mesAno){%>
 				<div class="row">
 					<div class="span8">
-
-						<table class="table  table-bordered table-striped">
-						  <thead>
-						    <tr><th colspan="5" class="text-center">${request.mesAno}</th></tr>
-							  <tr><th rowspan="2" class="text-center" style="vertical-align:middle;">DIA</th><th colspan="2" class="text-center">TURNO 1</th><th colspan="2" class="text-center">TURNO 2</th></tr>
-							  <tr><th>ENTRADA</th><th>SAIDA</th><th>ENTRADA</th><th>SAIDA</th></tr>							
-						  </thead>							
-						  <tbody>
-						  <%
-						  pMes = request.pontoDoMes
-						  pMes.each { p ->
-						  %>
-						  <tr><td>${(p.data as String)[0..1]}</td><td>${p?.t1}</td><td>${p?.t2}</td><td>${p?.t3}</td><td>${p?.t4}</td></tr>					
-						  <%
-						  }
-						  %>
-						  </tbody>						  
-						</table>
+            <select id="selectMes">
+              <option value="">---</option>      
+					  <%
+					  if (request.meses) { 
+					  %>
+      
+              <%
+					    request.meses.each { mes ->
+	  				  %>
+              <option value="mes">$mes</option>
+              <%
+              }  
+						}
+						%>					  
+            </select>
+            <div id="divTablePonto">
+              <a href="/intranet/ponto?mes=08">PONTO DO MES DE AGOSTO ${request.meses}</a>
+				        <table class="table table-bordered table-striped footable">
+						    <thead>
+						      <tr><th colspan="5" class="text-center">${request.mesAno}</th></tr>
+							    <tr><th rowspan="2" class="text-center" style="vertical-align:middle;">DIA</th><th colspan="2" class="text-center">TURNO 1</th><th colspan="2" class="text-center">TURNO 2</th></tr>
+							    <tr><th>ENTRADA</th><th>SAIDA</th><th>ENTRADA</th><th>SAIDA</th></tr>							
+						    </thead>							
+						    <tbody>
+						    <%
+						    pMes = request.pontoDoMes
+						    pMes.each { p ->
+						    %>
+						    <tr><td>${(p.data as String)[0..1]}</td><td>${p?.t1}</td><td>${p?.t2}</td><td>${p?.t3}</td><td>${p?.t4}</td></tr>					
+						    <%
+						    }
+						    %>
+						    </tbody>						  
+						  </table>
+						</div>
 				</div>
 				<%}%>				
 			</div>
@@ -95,6 +112,17 @@
 			
 <script>
 window.onload = displayTime;  // Start displaying the time when document loads.
+
+(jQuery)('#selectMes').change(function() {
+  var mes =(jQuery)(':selected').text(); 
+  alert(mes);
+  if (mes=="---") {
+    (jQuery)("#divTablePonto").hide();
+  } else {  
+//    alert('show');
+    (jQuery)("#divTablePonto").show();
+  }
+});
 
 function httpGet(theUrl)
 {
@@ -108,11 +136,6 @@ function httpGet(theUrl)
 
 // Define a function to display the current time
 function displayTime() {
-	/*
-		(jQuery).get('/intranet/clock', function(dateTime) {
-			var now = dateTime;
-		});
-	*/
 	var day = httpGet('/intranet/clock?t=data');
 	(jQuery)("#data").text(day);
 	(jQuery)("#hiddenData").val(day);		
@@ -129,7 +152,13 @@ function displayTime() {
 	  setTimeout(displayTime, 1000);               // Run again in 1 second
 	}
 }
+
+function changeMonth() { 
+  alert(document.selectMes.options[document.selectMes.selectedIndex].value); 
+//  document.testStar.src = imageArray[Index]; 
+//  document.testStar.alt = altArray[Index];	 
+}
 </script>
 
 
-<% include '/WEB-INF/includes/footer.gtpl' %>
+<% include '/WEB-INF/includes/footer_intra.gtpl' %>

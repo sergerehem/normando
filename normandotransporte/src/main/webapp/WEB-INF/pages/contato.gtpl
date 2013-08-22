@@ -28,7 +28,7 @@
         <div class="clear_both"></div>
 
 				<div class="span8">	
-	        <form name="contactForm" id="validForm" method="POST" action="/contato_submit">
+	        <form name="contactForm" id="validForm" method="POST" action="/contato">
 	            <div class="control-group">
 	                <label class="control-label" for="inputName">Nome<sup>*</sup></label>
 	                <div class="controls">
