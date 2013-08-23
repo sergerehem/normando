@@ -22,7 +22,8 @@
               <input id="filter" type="text" class="search-query" placeholder="Search">
               <button type="submit" class="btn"><i class="icon-search"></i></button>
           </div>
-      </form>      
+      </form>
+
       <table class="table table-bordered table-striped footable" data-filter="#filter">
 	      <thead>
 		      <th>#</th>	      

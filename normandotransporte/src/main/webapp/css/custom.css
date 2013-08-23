@@ -2574,3 +2574,34 @@ div.alert {
 .search-query:focus + button {
     z-index: 3;   
 }
+
+.composite-input {
+    color: @placeholderText;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+
+    &.focus { /* class assigned by jQuery below to create focus effect */
+        border-color: rgba(82,168,236,.8);
+        outline: 0;
+        outline: thin dotted \9; /* IE6-9 */
+        .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+    }
+
+    > input {
+        margin-bottom: 0;
+        margin-top: -3px;
+        padding: 0;
+        border: none;
+        outline: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        &:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}

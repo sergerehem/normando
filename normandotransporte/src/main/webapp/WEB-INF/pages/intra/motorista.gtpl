@@ -26,7 +26,7 @@
       </ul>
     </div>
     <div class="clear_both"></div>
-    <form class="form-horizontal">
+    <form class="formMotorista" method="post" action="/intranet/motorista">
       <fieldset>				
         <div class="tabbable tabs-left">
         <ul id="tab" class="nav nav-tabs" data-tabs="tabs">
@@ -43,42 +43,35 @@
         <div class="tab-content">
            <div class="tab-pane active" id="tabMotorista" >
               <!-- Form Name -->
-              <legend>Cadastro Motorista</legend>
+              <legend>Motorista</legend>
 
               <!-- Text input-->
               <div class="control-group">
-                <label class="control-label" for="nome">NomeMotorista</label>
+                <label class="control-label" for="nome">Nome</label>
                 <div class="controls">
                   <input id="nome" name="nome" type="text" placeholder="" class="input-xxlarge" required="">
                   
                 </div>
               </div>
 
-              <!-- Text input-->
-              <div class="control-group">
-                <label class="control-label" for="apelido">Apelido</label>
-                <div class="controls">
-                  <input id="apelido" name="apelido" type="text" placeholder="Como prefere ser chamado?" class="input-xlarge">
-                  
-                </div>
-              </div>
+               <div class="row">
+                  <!-- Text input-->
+                  <div class="control-group span4">
+                    <label class="control-label" for="apelido">Apelido</label>
+                    <div class="controls">
+                      <input id="apelido" name="apelido" type="text" placeholder="Como prefere ser chamado?" class="input-xlarge">
 
-              <!-- Text input-->
-              <div class="control-group">
-                <label class="control-label" for="dataNascimento">Data de Nascimento</label>
-                <div class="controls">
-                  <input id="dataNascimento" name="dataNascimento" type="text" placeholder="" class="input-xlarge">
-                  
-                </div>
-              </div>
+                    </div>
+                  </div>
 
-              <!-- Textarea -->
-              <div class="control-group">
-                <label class="control-label" for="enderecoMotorista">Endereço</label>
-                <div class="controls">                     
-                  <textarea id="enderecoMotorista" name="enderecoMotorista"></textarea>
-                </div>
-              </div>
+                  <!-- Text input-->
+                  <div class="control-group span3">
+                    <label class="control-label" for="dataNascimento">Data de Nascimento</label>
+                    <div class="controls">
+                      <input id="dataNascimento" name="dataNascimento" type="text" placeholder="" class="input-small">
+                    </div>
+                  </div>
+               </div>
 
               <!-- Text input-->
               <div class="control-group">
@@ -89,37 +82,48 @@
                 </div>
               </div>
 
-              <!-- Text input-->
-              <div class="control-group">
-                <label class="control-label" for="cidade">Cidade</label>
-                <div class="controls">
-                  <input id="cidade" name="cidade" type="text" placeholder="" class="input-xlarge">
-                  
+              <div class="row">
+                <div class="control-group span5">
+                  <!-- Text input-->
+                  <div class="control-group">
+                    <label class="control-label" for="cidade">Cidade</label>
+                    <div class="controls">
+                      <input id="cidade" name="cidade" type="text" placeholder="" class="input-xlarge">
+
+                    </div>
+                  </div>
                 </div>
+              <!-- Select Basic -->
+                  <div class="control-group span3">
+                    <label class="control-label" for="uf">UF</label>
+                    <div class="controls">
+                      <select id="uf" name="uf" class="input-mini">
+                        <option>BA</option>
+                        <option>SE</option>
+                      </select>
+                    </div>
+                  </div>
               </div>
 
-              <!-- Select Basic -->
-              <div class="control-group">
-                <label class="control-label" for="uf">UF</label>
-                <div class="controls">
-                  <select id="uf" name="uf" class="input-xlarge">
-                    <option>BA</option>
-                    <option>SE</option>
-                  </select>
-                </div>
-              </div>
+
 
               <!-- Text input-->
               <div class="control-group">
                 <label class="control-label" for="telefones">Telefones</label>
                 <div class="controls">
-                  <input id="telefones" name="telefones" type="text" placeholder="melhorar..." class="input-xlarge">
-                  
+                  <input id="telefones" name="telefones" type="text" placeholder="melhorar..." class="input-large"></input>
+                    <a href="#" class="btn btn-small" onclick="addItem('mySelect',(jQuery)('#telefones').val(),(jQuery)('#telefones').val());"><i class="icon-plus"></i></a>
+                    <a href="#" class="btn btn-small" onclick="removeSelectedItem('mySelect');"><i class="icon-minus"></i></a>
+                    <br>
+                  <select id="mySelect" size="3">
+                  </select>
+                  <div id="divTelefones">
+                  </div>
                 </div>
               </div>
               <div class="form-actions">
                 <div class="pull-right">
-                  <input type="button" value="Avançar >" class="btn btn-warning" onclick="nextTab('#tab');">
+                    <a href="#" class="btn btn-warning btn-large" onclick="nextTab('#tab')">Avançar <i class="icon icon-chevron-right"></i></a>
                 </div>
               </div>              
            </div>
@@ -185,7 +189,7 @@
 
               <!-- Text input-->
               <div class="control-group">
-                <label class="control-label" for="nomeDonoFrota">Nome do Dono da Frota</label>
+                <label class="control-label" for="nomeDonoFrota">Nome/Telefone do Dono da Frota</label>
                 <div class="controls">
                   <input id="nomeDonoFrota" name="nomeDonoFrota" type="text" placeholder="" class="input-xxlarge">
                   
@@ -202,10 +206,10 @@
 
               <div class="form-actions">
                 <div class="pull-left">
-                  <input type="button" value="< Voltar" class="btn btn-warning" onclick="prevTab('#tab');">
+                  <a href="#" class="btn btn-warning" onclick="prevTab('#tab')"><i class="icon icon-chevron-left"></i> Voltar</a>
                 </div>
                 <div class="pull-right">
-                  <input type="button" value="Avançar >" class="btn btn-warning" onclick="nextTab('#tab');">
+                    <a href="#" class="btn btn-warning btn-large" onclick="nextTab('#tab')">Avançar <i class="icon icon-chevron-right"></i></a>
                 </div>
               </div>              
            </div>
@@ -214,11 +218,10 @@
               <legend>Rotas</legend>
 
               <!-- Text input-->
-              <div class="cont  rol-group">
+              <div class="control-group">
                 <label class="control-label" for="destino">Destinos</label>
                 <div class="controls">
                   <input id="destino" name="destino" type="text" placeholder="melhorar..." class="input-xlarge">
-                  
                 </div>
               </div>
 
@@ -263,11 +266,10 @@
 
               <div class="form-actions">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-warning"><i class="icon-white icon-chevron-left"></i> Retornar</a>
+                  <button href="#" class="btn btn-warning" onclick="prevTab('#tab')"><i class="icon icon-chevron-left"></i> Voltar</button>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-warning btn-large"><i class="icon-white icon-ok"></i> Salvar</a>
-                  <a href="#" class="btn btn-warning btn-large"><i class="icon-white icon-ok"></i> Bootstrap Button Generator</a>
+                  <input type="submit" class="btn btn-warning btn-large" value="Salvar">
                 </div>
               </div>
            </div>
@@ -276,6 +278,25 @@
   </div>
 </div>
 <script>
+
+(jQuery)("#dataNascimento").mask("99/99/9999");
+(jQuery)("#telefones").mask("(99) 9999?9-9999");
+
+function addItem(id, text, value)
+{
+    var item = "<option value='+value+'>" + text + "</option>";
+    (jQuery)('#' + id).append(item);
+}
+function removeSelectedItem(id)
+{
+    (jQuery)('#'+id+' :selected').remove();
+}
+
+function removeItem(list)
+{
+  list.remove(list.selectedIndex)
+}
+
 function nextTab(elem) {
   (jQuery)(elem + ' li.active')
     .next()

@@ -2167,4 +2167,22 @@
     $this.typeahead($this.data())
   })
 
+
+ /* COMPOSITE INPUT
+  * ================== */
+  $(".composite-input").click(function (event) {
+      if(event.target == this) {
+        $(this).find("input").focus();
+      }
+  });
+  $(".composite-input .focus-input").click(function () {
+      $(this).parent(".composite-input").find("input").focus();
+  });
+  $(".composite-input > input").focus(function () {
+      $(this).parent(".composite-input").addClass("focus");
+  });
+  $(".composite-input > input").blur(function () {
+      $(this).parent(".composite-input").removeClass("focus");
+  });
+
 }(window.jQuery);

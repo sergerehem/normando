@@ -36,7 +36,8 @@
         <link href="/footable/css/footable.sortable-0.1.css" rel="stylesheet">    
         <script src="/footable/js/footable.js" type="text/javascript"></script>
         <script src="/footable/js/footable.sortable.js" type="text/javascript"></script>
-        <script src="/footable/js/footable.filter.js" type="text/javascript"></script>        
+        <script src="/footable/js/footable.filter.js" type="text/javascript"></script>
+        <script src="/js/bootstrap-datepicker.js" type="text/javascript"></script>
         <script type="text/javascript">
           (jQuery)(function() {
 	          (jQuery)('table.footable').footable();
