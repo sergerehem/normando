@@ -33,7 +33,7 @@ get "/gcm/unregister", forward: "/gcm/unregister.groovy"
 get "/gcm/send", forward: "/gcm/send.groovy"
 
 // JABBER
-get "/jabber/send", forward: "/jabber/send.groovy"
+get "/jabber/send", forward: "/jabber/sendMessage.groovy"
 jabber to: "/jabber/receive.groovy"
 jabber presence, to: "/jabber/presence.groovy"
 jabber subscription, to: "/jabber/subscription.groovy"

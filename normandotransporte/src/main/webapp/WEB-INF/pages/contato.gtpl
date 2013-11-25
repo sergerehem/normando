@@ -54,7 +54,9 @@
 	                </div>
 	            </div>
 	            <div class="control-group form-button-offset">
+  	            <div class="pull-right">
 	                <input type="submit" class="btn btn-warning" value="Enviar" />
+	              </div>
 	            </div>
 	        </form>
 				</div>
