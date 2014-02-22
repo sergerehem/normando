@@ -24,7 +24,7 @@
                             <div class="row show-grid">
 <!-- FOOTER: LOGO -->
                                 <div class="span4">
-<h4 class="center-title">Matriz - BA</h4>
+<h4 class="center-title">Normando Transportes</h4>
 <!-- FOOTER: ADDRESS -->
                                     <address class="address">
                                         <p><a href="/localizacao_matriz"><i class="icon-map-marker icon-large"></i></a>Posto Laçador, BR-324, Km 35 – Sala 17</p>
@@ -34,25 +34,30 @@
                                     </address>
                                 </div>
 
-<div class="span4">
-<h4 class="center-title">Filial - SE</h4>
-<!-- FOOTER: ADDRESS -->
-                                    <address class="address">
-                                        <p><a href="/localizacao_filial"><i class="icon-map-marker icon-large"></i></a>Posto Pedra Branca, BR-101, Km 75 – Box 39</p>
-                                        <p><i>&nbsp;&nbsp;</i>Pedra Branca</p>
-                                        <p><i>&nbsp;&nbsp;</i>Laranjeiras/SE</p>
-                                        <p><i class="icon-phone icon-large"></i>Tel: (79) 3281-3906</p>
-                                    </address>
-                                </div>
 <!-- FOOTER: ABOUT US -->
                                 <div class="span4 footer-center">
                                     <h4 class="center-title">Sobre Nós</h4>
-                                    <p>Carregamos revestimento cerâmico, argamassa, impermeabilizante, fertilizante, madeira, telha e plástico para todo o Brasil.</p>
+                                    <p>Atender as necessidades logísticas da sua empresa através do transporte rodoviário seguro de cargas.
+                                    Carregamos revestimento cerâmico, argamassa, impermeabilizante, fertilizante, madeira, telha e
+                                    plástico para todo o Brasil.</p>
                                                                     </div>
 <!-- FOOTER: NAVIGATION LINKS -->
-                              
-                            </div>
-                        </div>
+                              <div class="span4 footer-right">
+                                  <h4 class="center-title">Navegar</h4>
+                                  <ul class="footer-navigate">
+                                      <li> <a href="/">Home</a>
+                                      </li>
+                                      <li> <a href="/equipe">Equipe</a>
+                                      </li>
+                                      <li> <a href="/localizacao_matriz">Localização</a>
+                                      </li>
+                                      <li> <a href="/orcamento">Orçamento</a>
+                                      </li>
+                                      <li> <a href="/contato">Contato</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                           </div>
                     </div>
                 </div>
             </div>

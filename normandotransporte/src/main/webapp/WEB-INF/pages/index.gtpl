@@ -58,7 +58,7 @@
             <div class="span9">
                 <div class="hero-content-3">
                     <h2>A gente se entrega e as melhores condições chegam até você</h2>
-                    <p>Atender as necessidades logísticas da sua empresa através do transporte seguro de cargas. Esse é o trabalho da Normando Transportes, que proporciona um serviço da mais alta qualidade, superando expectativas. Porque a gente se entrega.</p>
+                    <p>Atender as necessidades logísticas da sua empresa através do transporte rodoviário seguro de cargas. Esse é o trabalho da Normando Transportes, que proporciona um serviço da mais alta qualidade, superando expectativas. Porque a gente se entrega.</p>
                 </div>
             </div>
             <div class="span3">
@@ -136,4 +136,7 @@
 </div>
 
 
-<% include '/WEB-INF/includes/footer_intra.gtpl' %>
+
+<% include '/WEB-INF/includes/footer.gtpl' %>
+
+

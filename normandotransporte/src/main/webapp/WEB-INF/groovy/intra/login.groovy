@@ -4,7 +4,7 @@ if (params.email && params.password) {
 
   def user = datastore.execute {
 	  select email from "users"
-	  where email = params.email
+	  where email == params.email
   }
   
   if (user != null) {
@@ -17,3 +17,4 @@ if (params.email && params.password) {
     forward
   }
 
+}

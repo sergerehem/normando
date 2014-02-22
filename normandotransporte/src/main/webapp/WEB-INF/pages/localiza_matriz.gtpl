@@ -8,8 +8,7 @@
                         <div id="breadcrumb">
                         <ul>
                             <li class="home"><a href="/">home</a></li>
-														<li>localização</li>
-														<li>matriz</li>
+                            <li>localização</li>
                         </ul>
                         </div>
                         <div class="clear_both"></div>
@@ -23,7 +22,7 @@
 
 <!-- BEGIN RIGHT-SIDE CONTACT FORM AREA -->
                                 <div class="contact-info span4">
-                                    <h2>Matriz - BA</h2>
+                                    <h2>Normando Transportes</h2>
 <!-- COMPANY ADDRESS -->                         
                                     <address>
                                         Rodovia BR 324, KM 35, S/N<br />

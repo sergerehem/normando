@@ -46,8 +46,7 @@
                     </div>
                     <div class="span6 offset2">
 <!-- HEADER: PHONE NUMBER -->
-                        <p class="head_phone"><a href="tel:71-3286-3996"><span class="ddd">71</span> 3289-3966 BA</a> | 
-												<a href="tel:79-3281-3906"><span class="ddd">79</span> 3281-3906 SE</a></p>
+                        <p class="head_phone"><a href="tel:71-3286-3996"><span class="ddd">71</span> 3289-3996</a></p>
                     </div>
 <!-- HEADER: SOCIAL ICONS -->
                     <ul class="socials unstyled">
@@ -73,15 +72,10 @@
                                     <li class="single"><a href="/equipe">EQUIPE
                                             <i>nosso time</i>
                                         </a>
-                                    </li>                               
-                                    <li class="dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">
-                                            LOCALIZAÇÃO<i>bahia | sergipe</i>
+                                    </li>
+                                     <li class="single"><a href="/localizacao_matriz">LOCALIZAÇÃO
+                                            <i>onde estamos</i>
                                         </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="/localizacao_matriz">Matriz - BA</a></li>
-                                            <li><a href="/localizacao_filial">Filial - SE</a></li>
-                                        </ul>
                                     </li>
                                     <li class="single"><a href="/orcamento">ORÇAMENTO
                                             <i>solicite</i>
