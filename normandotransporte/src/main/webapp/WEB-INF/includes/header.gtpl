@@ -46,7 +46,7 @@
                     </div>
                     <div class="span6 offset2">
 <!-- HEADER: PHONE NUMBER -->
-                        <p class="head_phone"><a href="tel:71-3286-3996"><span class="ddd">71</span> 3289-3996</a></p>
+                        <p class="head_phone"><a href="tel:71-3286-3996"><span class="ddd">71</span> 3289-3996</a> | <a href="tel:71-9381-3366">9381-3366</a></p>
                     </div>
 <!-- HEADER: SOCIAL ICONS -->
                     <ul class="socials unstyled">

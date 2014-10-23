@@ -47,9 +47,9 @@
                 </div>
     <!-- PORTFOLIO ITEM 2 -->
                 <div class="span3 small hp-wrapper element comercial">                        
-                    <a href="#" class="top-link"><img alt="Milena Normando" style="width: 220px; height: 160px;" src="img/milena_small.jpg"></a>
+                    <a href="#" class="top-link"><img alt="Cecília Matos" style="width: 220px; height: 160px;" src="img/cecilia_small.jpg"></a>
                     <div class="bottom-block">
-                        <a href="/contato?assunto=COMERCIAL/MKT">Milena Normando</a>
+                        <a href="/contato?assunto=COMERCIAL/MKT">Cecília Matos</a>
                         <p>Comercial & Marketing</p>
                     </div>                                
                 </div>
@@ -81,9 +81,9 @@
                 </div>
     <!-- PORTFOLIO ITEM 6 -->
                 <div class="span3 small hp-wrapper element operacional">                        
-                    <a href="#" class="top-link"><img alt="Ednardo Castro" style="width: 220px; height: 160px;" src="img/ednardo_small.jpg"></a>
+                    <a href="#" class="top-link"><img alt="Jackson Castro" style="width: 220px; height: 160px;" src="img/jackson_small.jpg"></a>
                     <div class="bottom-block">
-                        <a href="/contato?assunto=OPERACIONAL">Ednardo Castro</a>
+                        <a href="/contato?assunto=OPERACIONAL">Jackson Castro</a>
                         <p>Operacional</p>
                     </div>                                
                 </div>
