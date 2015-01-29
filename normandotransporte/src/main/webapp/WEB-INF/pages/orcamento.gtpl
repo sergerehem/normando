@@ -6,7 +6,7 @@
 <div class="alert alert-success">
 	<button data-dismiss="alert" class="close" type="button">×</button>
 	<h2>Orçamento Solicitado com Sucesso</h2>
-	<p>Obrigado por entrar em contato com a Normando Transporte. Daremos retorno até o próximo dia útil.</p>
+	<p>Obrigado por solicitar seu orçamento com a Normando Transporte. Daremos retorno até o próximo dia útil.</p>
 </div>
 <%} else if (request.getAttribute('status') == "ERRO") {%>
 <div class="alert alert-error">
@@ -133,15 +133,15 @@
 	                      <textarea name="info" rows="4" class="span8" id="info" placeholder="Observações e esclarecimentos adicionais"></textarea>
 	                  </div>
 	              </div>
-								<div class="control-group">
-									<label class="control-label" for="copia"></label>
-									<div class="controls">
-										<label class="checkbox" for="checkCopia">
-											<input type="checkbox" name="copia" id="checkCopia" value="S" checked>
-											Desejo receber uma cópia desta solicitação em meu e-mail
-										</label>
-									</div>
-								</div>
+					<div class="control-group">
+						<label class="control-label" for="copia"></label>
+						<div class="controls">
+							<label class="checkbox" for="checkCopia">
+								<input type="checkbox" name="copia" id="checkCopia" value="S" checked>
+								Desejo receber uma cópia desta solicitação em meu e-mail
+							</label>
+						</div>
+					</div>
 	              <div class="control-group form-button-offset">
 	                  <input type="submit" class="btn btn-warning" value="Solicitar orçamento" />
 	              </div>

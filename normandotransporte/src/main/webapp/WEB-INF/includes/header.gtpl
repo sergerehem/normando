@@ -80,7 +80,11 @@
                                     <li class="single"><a href="/orcamento">ORÇAMENTO
                                             <i>solicite</i>
                                         </a>
-                                    </li>                                       
+                                    </li>     
+                                    <li class="single"><a href="/ocorrencia">OCORRÊNCIA
+                                            <i>registre</i>
+                                        </a>
+                                    </li>                                                                          
                                     <li class="single"><a href="/contato">CONTATO
                                             <i>fale conosco</i>
                                         </a>

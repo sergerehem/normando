@@ -20,7 +20,7 @@ public class Config {
 
 	def getMailSender() {
 		//config.mailSender[0]
-		"milena@normandotransportes.com.br"
+		"anisio@normandotransportes.com.br"
 	}
 	
 	def getReplyTo() {
