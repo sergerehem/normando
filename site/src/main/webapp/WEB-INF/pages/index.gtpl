@@ -111,7 +111,7 @@
     </div>
 </div>
 <hr/>
-<!-- MAIN CLIENTS STARTS HERE -->
+<!-- MAIN CLIENTS STARTS HERE 
 <div class="main-block clients">
     <div class="line_title">
         <h2><a href="#">Alguns dos nossos clientes</a></h2>                       
@@ -135,7 +135,7 @@
     </div>
 	</div>
 </div>
-
+-->
 
 
 <% include '/WEB-INF/includes/footer.gtpl' %>

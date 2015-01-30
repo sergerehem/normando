@@ -1,4 +1,5 @@
-<% include '/WEB-INF/includes/header.gtpl?title=Normando Transportes - Transporte rodoviário de cargas totalmente seguradas para todo o Brasil' %>
+<% include '/WEB-INF/includes/header.gtpl' %>
+<!-- ?title=Normando Transportes - Transporte rodoviário de cargas totalmente seguradas para todo o Brasil -->
 
 <!-- MAIN CONTENT AREA: SLIDER BANNER (REVOLUTION SLIDER) -->
 <div class="bannercontainer" >
